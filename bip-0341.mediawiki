@@ -99,6 +99,7 @@ The parameter ''ext_flag'' is an integer in range 0-127, and is used for indicat
 If the parameters take acceptable values, the message is the concatenation of the following data, in order (with byte size of each item listed in parentheses). Numerical values in 2, 4, or 8-byte are encoded in little-endian.
 
 * Control:
+** ''epoch'' (1).
 ** ''hash_type'' (1).
 * Transaction data:
 ** ''nVersion'' (4): the ''nVersion'' of the transaction.
