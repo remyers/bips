@@ -107,8 +107,8 @@ If these restrictions aren't violated, ''SigMsg118(hash_type,ext_flag)'' evaluat
 ** If ''hash_type & 0xc0'' is non-zero:
 *** If ''hash_type & 0xc0'' is <code>SIGHASH_ANYONECANPAY</code>:
 **** ''outpoint'' (36): the <code>COutPoint</code> of this input (32-byte hash + 4-byte little-endian).
-*** If ''hash_type & 0xc0'' is <code>SIGHASH_ANYONECANPAY</code> or <code>SIGHASH_ANYPREVOUT</code>:
-**** ''amount'' (8): value of the previous output spent by this input.
+*** ''amount'' (8): value of the previous output spent by this input.
+*** If ''hash_type & 0xc0'' is <code>SIGHASH_ANYONECANPAY</code> or <code>SIGHASH_ANYPREVOUT</code>
 **** ''scriptPubKey'' (35): ''scriptPubKey'' of the previous output spent by this input, serialized as script inside <code>CTxOut</code>. Its size is always 35 bytes.
 *** ''nSequence'' (4): ''nSequence'' of this input.
 ** If ''hash_type & 0xc0'' is zero:
